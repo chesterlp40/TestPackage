@@ -19,15 +19,13 @@ final class PackageTests: XCTestCase {
     }
 
     func testExample() throws {
-        let packageInstance = OncePackageExample()
-        print("Test")
+        // Given
+        let packageVC = WelcomeViewController()
+        
+        // When
+        packageVC.loadViewIfNeeded()
+        
+        // Then
+        XCTAssertEqual(packageVC.testVariable, "This is a test")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
