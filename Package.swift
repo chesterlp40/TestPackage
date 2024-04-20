@@ -17,7 +17,8 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "TestPackage",
-            path: "Sources"
+            path: "Sources",
+            exclude: ["../TestAppExamplePackage", "../Tests"]
         ),
         .testTarget(
             name: "TestPackageTests",
