@@ -17,13 +17,13 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "TestPackage",
-            path: "Sources",
-            exclude: ["../TestAppExamplePackage", "../Tests"]
+            path: ".",
+            exclude: ["TestAppExamplePackage", "Tests"],
+            sources: ["Sources"]
         ),
         .testTarget(
             name: "TestPackageTests",
-            dependencies: ["TestPackage"], 
-            path: "Tests"
+            dependencies: ["TestPackage"]
         ),
     ]
 )
