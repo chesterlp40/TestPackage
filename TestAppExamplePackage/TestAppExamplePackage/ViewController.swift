@@ -14,6 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-
+    @IBAction func redirectButtonPressed(
+        _ sender: UIButton
+    ) {
+        let packageVC = PackageViewController()
+        self.navigationController?.pushViewController(
+            packageVC,
+            animated: true
+        )
+    }
+    
 }
 
